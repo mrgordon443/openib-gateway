@@ -3,8 +3,10 @@ import pandas as pd
 import os
 
 # === Load credentials from GitHub Secrets ===
-OANDA_API_KEY = os.getenv("OANDA_API_KEY" "840a20f2758df2d837bd9ec0789513f7-4ef1dfd6eed292cd26c07b988038c8ea)
-OANDA_ACCOUNT_ID = os.getenv("OANDA_ACCOUNT_ID", "101-002-31813721-001")
+import os
+
+OANDA_API_KEY = os.environ["OANDA_API_KEY"]
+OANDA_ACCOUNT_ID = os.environ["OANDA_ACCOUNT_ID"]
 
 # === Constants ===
 OANDA_URL = "https://api-fxpractice.oanda.com/v3"

@@ -12,7 +12,7 @@ HEADERS = {
     "Authorization": f"Bearer {OANDA_API_KEY}",
     "Content-Type": "application/json"
 }
-INSTRUMENT = "CAD_USD"
+INSTRUMENT = "EUR_CAD"
 UNITS = "100"  # Use positive for buy, negative for sell
 
 # === Get historical candles ===

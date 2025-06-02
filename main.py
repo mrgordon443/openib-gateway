@@ -158,7 +158,7 @@ def simple_trading_strategy(trader, instrument='EUR_USD'):
     Simple trading strategy using RSI and moving averages
     """
     print(f"Starting trading strategy for {instrument}")
-    print(f"RSI Value: {rsi}")
+    
     # Get historical data
     candles_data = trader.get_candles(instrument, count=50, granularity='M5')
     
@@ -191,15 +191,6 @@ def simple_trading_strategy(trader, instrument='EUR_USD'):
     if rsi and sma_20 and sma_50:
         # Buy signal: RSI oversold and short SMA above long SMA
         if rsi < 30 and sma_20 > sma_50:
-    print("BUY signal: RSI is low (<30) and short-term SMA is above long-term SMA")
-    # Place buy order here
-
-elif rsi > 70 and sma_20 < sma_50:
-    print("SELL signal: RSI is high (>70) and short-term SMA is below long-term SMA")
-    # Place sell order here
-
-else:
-    print("HOLD: No valid trading signal - RSI not extreme or SMA crossover not met")
             print("BUY SIGNAL DETECTED!")
             # Calculate stop loss and take profit
             stop_loss = current_price * 0.99  # 1% stop loss
